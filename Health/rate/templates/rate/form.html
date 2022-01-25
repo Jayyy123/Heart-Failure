@@ -1,0 +1,44 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+<!-- <form method="POST" action="">
+    {%csrf_token%}
+    <div class = "container">
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h2>Predicition Model</h2>
+    <p>Name:  <input type="text" placeholder="Enter your Name here"></p>
+    <p>age:<input type="number" placeholder="Enter your Age here"></p>
+    <p>sex:<input type="number" placeholder="Enter your Sex(0 for female and 1 for male) here"></p>
+    <p>anaemia:<input type="number" placeholder="Are you Anaemic? 0 for NO"></p>
+    <p>creatinine_phosphokinase:<input type="number" placeholder="Enter your C-P here"></p>
+    <p>diabetes:<input type="number" placeholder="Are you Diabetic? 0 for NO"></p>
+    <p>ejection_fraction:<input type="number" placeholder="Enter your E_F  here"></p>
+    <p>high_blood_pressure:<input type="number" placeholder="Enter your BP here"></p>
+    <p>platelets:<input type="number" placeholder="Enter your palete level here"></p>
+    <p>serum_creatinine:<input type="number" placeholder="Enter your Creatinine level here"></p>
+    <p>serum_sodium:<input type="number" placeholder="Enter your Creatinine level for sodium here"></p>
+    <p>smoking:<input type="number" placeholder="Do you smoke? 0 is for No"></p>
+    <p>time:<input type="number" placeholder="your time"></p>
+    
+    <button><a href="/home/">< Back</button></a>
+    <input type = "submit"></div>
+</form> -->
+
+<!--form-->
+<link rel="stylesheet" href="{%static 'styles/form.css/'%}">
+<form method="POST", enctype="multipart/form-data">
+  {%csrf_token%}
+  <hr><hr.<hr><hr><hr.<hr><hr><hr.<hr><hr><hr.<hr>
+  <h2>Heart Model</h2>
+<div class="row g-3">
+    <div class="col">
+       {{a.as_p}}
+       <button>Submit</button>
+       <button><a href="/home/">< Back</button></a>
+    </div>
+  </div></form>
+
+{%endblock%}

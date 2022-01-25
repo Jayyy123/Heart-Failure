@@ -1,0 +1,29 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+<hr><hr><hr><hr>
+<table>
+   
+    <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Sex(1 for male and 0 for female)</th>
+        <th>Date and Time Created</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {%for i in e%}
+    <tr>
+        <td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.sex}}</td>
+        <td>{{i.log}}</td>
+        <td><a href="/multi/{{i.id}}"> VIEW</a></td>
+        <td><a href="/result/{{i.id}}"> Predict</a></td>
+        <td><a href="/deletebase/{{i.id}}"> Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
