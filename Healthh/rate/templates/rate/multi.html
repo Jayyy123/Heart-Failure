@@ -4,5 +4,6 @@
 <hr><hr><hr><hr>
 <h2><strong>Welcome {{a.first_name}} {{a.last_name}}</strong></h2>
 <hr>
-<b>Your Heart rate is </b>
+<b>Your Heart rate is {%if a.result == 0%} Negative,rest easy, 
+    {%else%} Positive,please contact your doctor immediately{%endif%}</b>
 {%endblock%}

@@ -29,14 +29,14 @@
 
 <!--form-->
 <link rel="stylesheet" href="{%static 'styles/form.css/'%}">
-<form method="POST", enctype="multipart/form-data">
+<form method="POST", method = "get",enctype="multipart/form-data">
   {%csrf_token%}
   <hr><hr.<hr><hr><hr.<hr><hr><hr.<hr><hr><hr.<hr>
   <h2>Heart Model</h2>
 <div class="row g-3">
     <div class="col">
        {{a.as_p}}
-       <button>Submit</button>
+       <input type = "submit">
        <button><a href="/home/">< Back</button></a>
     </div>
   </div></form>

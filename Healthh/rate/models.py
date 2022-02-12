@@ -47,5 +47,16 @@ def deletedetails(sender, instance, **kwargs):
     user = instance.user
     user.delete()
 
+class HeartFailure(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    username = models.CharField(max_length=50)
+    result = models.IntegerField()
+    stamp = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(default=uuid.uuid4,unique=True,primary_key=True,editable=False)
+
+    def __str__(self) -> str:
+        return self.first_name
+
 
 # post_save.connect(update, sender = Details)
