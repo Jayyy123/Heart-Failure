@@ -19,7 +19,7 @@ def home(request):
 def predict(request):
     return render(request, 'rate/predict.html')
     
-@login_required(redirect_field_name="loginpage")
+# @login_required(redirect_field_name="loginpage")
 def forms(request):
     a = HeartForm()
     with open('hrm', 'rb') as f:
@@ -59,7 +59,7 @@ def forms(request):
 
     return render(request, 'rate/form.html', {'a':a})
 
-@login_required( redirect_field_name= "loginpage")
+# @login_required( redirect_field_name= "loginpage")
 def database(request):
     f = HeartFailure.objects.all()
     return render(request, 'rate/database.html', {'f':f})
